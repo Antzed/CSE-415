@@ -1,0 +1,126 @@
+Welcome to ItrDFS
+Initial State:
+left: ['Farmer', 'Fox', 'Chicken', 'Grain']
+right: []
+side: left
+
+len(OPEN)= 1; len(CLOSED)= 0; COUNT = 0
+['Fox', 'Grain']
+['Farmer', 'Chicken']
+OPEN is now: left: ['Fox', 'Grain']
+right: ['Farmer', 'Chicken']
+side: right
+
+len(OPEN)= 1; len(CLOSED)= 1; COUNT = 1
+['Chicken']
+['Fox', 'Grain', 'Farmer']
+[]
+['Fox', 'Grain', 'Farmer', 'Chicken']
+OPEN is now: left: ['Fox', 'Grain', 'Farmer']
+right: ['Chicken']
+side: left
+
+len(OPEN)= 1; len(CLOSED)= 2; COUNT = 2
+['Fox', 'Grain']
+['Chicken', 'Farmer']
+['Grain']
+['Chicken', 'Farmer', 'Fox']
+['Fox']
+['Chicken', 'Farmer', 'Grain']
+OPEN is now: left: ['Grain']
+right: ['Chicken', 'Farmer', 'Fox']
+side: right
+, left: ['Fox']
+right: ['Chicken', 'Farmer', 'Grain']
+side: right
+
+len(OPEN)= 2; len(CLOSED)= 3; COUNT = 3
+['Chicken']
+['Grain', 'Farmer', 'Fox']
+['Fox']
+['Grain', 'Farmer', 'Chicken']
+OPEN is now: left: ['Grain', 'Farmer', 'Chicken']
+right: ['Fox']
+side: left
+, left: ['Fox']
+right: ['Chicken', 'Farmer', 'Grain']
+side: right
+
+len(OPEN)= 2; len(CLOSED)= 4; COUNT = 4
+['Grain']
+['Fox', 'Farmer', 'Chicken']
+['Chicken']
+['Fox', 'Farmer', 'Grain']
+OPEN is now: left: ['Chicken']
+right: ['Fox', 'Farmer', 'Grain']
+side: right
+, left: ['Fox']
+right: ['Chicken', 'Farmer', 'Grain']
+side: right
+
+len(OPEN)= 2; len(CLOSED)= 5; COUNT = 5
+['Fox', 'Grain']
+['Chicken', 'Farmer']
+['Grain']
+['Chicken', 'Farmer', 'Fox']
+['Fox']
+['Chicken', 'Farmer', 'Grain']
+OPEN is now: left: ['Chicken', 'Farmer']
+right: ['Fox', 'Grain']
+side: left
+, left: ['Chicken', 'Farmer', 'Fox']
+right: ['Grain']
+side: left
+, left: ['Fox']
+right: ['Chicken', 'Farmer', 'Grain']
+side: right
+
+len(OPEN)= 3; len(CLOSED)= 6; COUNT = 6
+['Chicken']
+['Fox', 'Grain', 'Farmer']
+[]
+['Fox', 'Grain', 'Farmer', 'Chicken']
+OPEN is now: left: []
+right: ['Fox', 'Grain', 'Farmer', 'Chicken']
+side: right
+, left: ['Chicken', 'Farmer', 'Fox']
+right: ['Grain']
+side: left
+, left: ['Fox']
+right: ['Chicken', 'Farmer', 'Grain']
+side: right
+
+len(OPEN)= 3; len(CLOSED)= 7; COUNT = 7
+Everything is transported!! Problem solved!!
+Solution path:
+left: ['Farmer', 'Fox', 'Chicken', 'Grain']
+right: []
+side: left
+
+left: ['Fox', 'Grain']
+right: ['Farmer', 'Chicken']
+side: right
+
+left: ['Fox', 'Grain', 'Farmer']
+right: ['Chicken']
+side: left
+
+left: ['Grain']
+right: ['Chicken', 'Farmer', 'Fox']
+side: right
+
+left: ['Grain', 'Farmer', 'Chicken']
+right: ['Fox']
+side: left
+
+left: ['Chicken']
+right: ['Fox', 'Farmer', 'Grain']
+side: right
+
+left: ['Chicken', 'Farmer']
+right: ['Fox', 'Grain']
+side: left
+
+left: []
+right: ['Fox', 'Grain', 'Farmer', 'Chicken']
+side: right

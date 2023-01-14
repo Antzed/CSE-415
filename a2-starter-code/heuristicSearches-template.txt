@@ -1,0 +1,61 @@
+A2_Report.pdf
+
+partner 1 firstname and lastname: Anthony
+
+partner 2 firstname and lastname: Gao
+
+
+Assignment 2 Report -- Heuristic Search
+
+CSE 415: Introduction to Artificial Intelligence
+Autumn, 2022
+
+
+1. Results with Heuristics for the Eight Puzzle
+
+ Puzzle  Heuristic  Solved?  # Soln Edges  Soln Cost   # Expanded  Max OPEN
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | none (UCS)|   Y        |      7              |    7.0       |    166         |  101     |
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | Hamming   |   Y        |      7              |    7.0       |     8           |   6         |
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | Manhattan |   Y        |      7              |    7.0       |      7           |  6         |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | none (UCS)|   Y        |     12             |    12.0      |    1490      |  898     |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | Hamming   |   Y        |     12             |    12.0     |   96            |  72       |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | Manhattan |   Y        |     12             |   12.0      |   33            |  25       |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | none (UCS)|   Y        |     14             |   14.0      |    4070       |  2290   |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | Hamming   |   Y        |     14              |   14.0     |    196         |  127     |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | Manhattan |   Y        |     14             |   14.0      |    56           |  39       |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | none (UCS)|   Y        |     16             |   16.0      |    7982       |  4700   |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | Hamming   |   Y        |     16             |   16.0      |    617        |  365     |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | Manhattan |   Y        |     16             |   16.0      |    148        |  96       |
++------+-----------+-------+--------------+----------+------------+--------+
+
+Puzzle A: [3,0,1,6,4,2,7,8,5]
+Puzzle B: [3,1,2,6,8,7,5,4,0]
+Puzzle C: [4,5,0,1,2,8,3,7,6]
+Puzzle D: [0,8,2,1,7,4,3,6,5]
+
+
+2. (Optional) Evaluating Our Custom Heuristics
+
+Overall, UCS is the slowest out of the three type of search. Hamming search, on the other hand,
+is faster than UCS, but slower than Manhattan, and the fastest heuristics is Manhattan.
+
+The reason for UCS to be the slowest is due to its lack of use in heuristics. UCS is doing all the
+searches blindly, which makes it the least efficient out of these three search methods.
+
+The hamming search, on the other hand, is using heuristics and is not fully blind. However, it is
+still relatively "blind" compare to Manhattan since it operated based only on knowing which tile is
+in the wrong place. Manhattan is more efficient because it bases all of its actions on moving the
+tiles to its correct spot. By knowing both "this tile is wrong" and "this tile needs to go there to be correct",
+Manhattan search will be faster from the get-go.
